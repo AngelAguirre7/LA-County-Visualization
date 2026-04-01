@@ -21,7 +21,7 @@ var style_low_risk_2 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 8.0 + size,
+        image: new ol.style.Circle({radius: 14.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(6,13,5,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(84,176,74,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
