@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-13183887.813932, 4037445.027305, -13171984.757545, 4045394.629526], map.getSize());
+map.getView().fit([-13225022.309099, 3969483.293008, -13087718.760529, 4096676.928550], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -291,7 +291,7 @@ function onPointerMove(evt) {
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({
                             fill: new ol.style.Fill({
-                                color: "rgba(255, 255, 0, 1.00)"
+                                color: "rgba(255, 255, 0, 0.10)"
                             }),
                             radius: radius
                         })
@@ -302,7 +302,7 @@ function onPointerMove(evt) {
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 0, 1.00)',
+                            color: 'rgba(255, 255, 0, 0.10)',
                             lineDash: null,
                             width: featureWidth
                         })
@@ -311,7 +311,7 @@ function onPointerMove(evt) {
                 } else {
                     highlightStyle = new ol.style.Style({
                         fill: new ol.style.Fill({
-                            color: 'rgba(255, 255, 0, 1.00)'
+                            color: 'rgba(255, 255, 0, 0.10)'
                         })
                     })
                 }
@@ -677,7 +677,7 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_Zipcodes_4,
+    layer: lyr_Zipcodes_1,
     colName: 'ZIPCODE',
     zoom: 10,
     collapsed: true,
